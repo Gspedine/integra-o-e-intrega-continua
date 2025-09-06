@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Relógios Patek Philippe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1547996160-5a49682c6b69') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .products {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            color: #1a1a1a;
+        }
+
+        .product-card p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .product-card .price {
+            font-size: 1.2em;
+            color: #d4af37;
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #d4af37;
+        }
+
+        .reviews {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .review-card p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .review-card .author {
+            font-size: 0.9em;
+            color: #d4af37;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Patek Philippe Boutique</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#products">Coleção</a>
+        <a href="#reviews">Avaliações</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>Elegância Atemporal</h2>
+            <p>Descubra a excelência dos relógios Patek Philippe, sinônimo de sofisticação e precisão.</p>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Nossa Coleção</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1" alt="Patek Philippe Nautilus">
+                <h3>Nautilus</h3>
+                <p>Um ícone de design esportivo e elegância.</p>
+                <p class="price">R$ 250.000,00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523177812965-90d74c2a063b" alt="Patek Philippe Calatrava">
+                <h3>Calatrava</h3>
+                <p>Clássico e minimalista, perfeito para todas as ocasiões.</p>
+                <p class="price">R$ 180.000,00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1517466786969-7f12caf26f83" alt="Patek Philippe Aquanaut">
+                <h3>Aquanaut</h3>
+                <p>Moderno e robusto, ideal para aventureiros sofisticados.</p>
+                <p class="price">R$ 220.000,00</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h2>Avaliações dos Clientes</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <p>"O Nautilus é simplesmente impecável. A qualidade e o design são incomparáveis, e o atendimento da loja foi excepcional."</p>
+                <p class="author">- João S.</p>
+            </div>
+            <div class="review-card">
+                <p>"Comprei um Calatrava e estou encantado com a elegância e precisão. A experiência de compra foi muito profissional."</p>
+                <p class="author">- Maria L.</p>
+            </div>
+            <div class="review-card">
+                <p>"O Aquanaut superou minhas expectativas. É robusto, moderno e perfeito para o dia a dia. Recomendo a todos!"</p>
+                <p class="author">- Carlos M.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Patek Philippe Boutique. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
